@@ -1,0 +1,43 @@
+### Get all authors
+GET http://localhost:3000/authors
+
+### Create author
+POST http://localhost:3000/authors
+Content-Type: application/json
+
+{
+  "firstName":"Jane",
+  "lastName":"Doe",
+  "bio":"Example author",
+  "birthdate":"1975-10-01",
+  "nationality":"American"
+}
+
+### Get all books
+GET http://localhost:3000/books
+
+### Create book (replace authorId with a real one from authors result)
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title":"My Example Book",
+  "authorId":"<replace-with-author-id>",
+  "isbn":"978-0-123456-47-2",
+  "publisher":"ACME Press",
+  "publishedDate":"2020-01-01",
+  "pages":320,
+  "genre":"Fiction",
+  "summary":"Short description"
+}
+
+### Update book (partial)
+PUT http://localhost:3000/books/<bookId>
+Content-Type: application/json
+
+{
+  "genre":"Sci-Fi"
+}
+
+### Delete book
+DELETE http://localhost:3000/books/<bookId>

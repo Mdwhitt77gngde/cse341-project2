@@ -1,0 +1,22 @@
+{
+  "name": "week3-library-api",
+  "version": "1.0.0",
+  "description": "Week 3 Library API - Books & Authors (CRUD + Swagger)",
+  "main": "server.js",
+  "scripts": {
+    "generate-swagger": "node swagger.js",
+    "start": "node server.js",
+    "dev": "node server.js",
+    "postinstall": "node swagger.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "mongodb": "^5.9.0",
+    "swagger-autogen": "^2.23.0",
+    "swagger-ui-express": "^4.6.3",
+    "express": "^4.18.2"
+  }
+}
