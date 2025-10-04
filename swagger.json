@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Library API",
-    "description": "Books & Authors API (Week 3)",
+    "description": "Books & Authors API (Week 3/4)",
     "version": "1.0.0"
   },
   "host": "localhost:3000",
@@ -10,6 +10,14 @@
   "schemes": [
     "http"
   ],
+  "securityDefinitions": {
+    "bearerAuth": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "description": "Enter: Bearer <JWT token>"
+    }
+  },
   "paths": {
     "/": {
       "get": {
